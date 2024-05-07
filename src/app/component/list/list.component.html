@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="card">
+        <h2 class="title-es">Esercizio Moderato</h2>
+        <div *ngFor="let item of completeList; let last = last;" class="">
+            <div class="first-row">
+                <div class="first-letters">{{getFirstLettersName(item.name)}}</div>
+                <div>
+                    <h2 class="post-title">{{item.title}}</h2>
+                    <span class="pubblic-by">pubblicato da: <span class="username">{{item.username}}</span></span>
+                </div>
+            </div>
+            <div class="separationLine" *ngIf="!last"></div>
+        </div>
+
+    </div>
+</div>

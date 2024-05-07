@@ -1,0 +1,48 @@
+.container{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.card{
+    border: 1px solid lightgrey;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.title-es{
+    text-align: center;
+}
+
+.separationLine {
+    margin: 20px;
+    height: 2px;
+    background-color: lightgrey;
+}
+
+.post-title {
+    color: red;
+    font-weight: bold;
+}
+.public-by{
+    font-size: 0.75rem;
+}
+.username {
+    color: red;
+    text-decoration: underline;
+}
+
+.first-row{
+    display: flex;
+}
+
+.first-letters{
+    align-content: center;
+    text-align: center;
+    align-self: center;
+    color: white;
+    background-color: red;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-right: 10px;
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+}
