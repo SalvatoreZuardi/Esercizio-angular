@@ -1,9 +1,18 @@
 <div class="container">
     <div class="card">
         <h2 class="title-es">Esercizio Moderato</h2>
+        <div class="collapse">
+            <div class="card card-body" *ngIf="detailOpened">
+                <span class="public-by">Post pubblicato da: {{detailData.name}} alias <span
+                        class="red">{{detailData.username}}</span></span>
+                <h2 class="post-title">{{detailData.title}}</h2>
+                <p>{{detailData.body}}</p>
+                <div class="button" (click)="hideDetail()">Chiudi</div>
+            </div>
+        </div>
         <div *ngFor="let item of completeList; let last = last;" class="">
             <div class="first-row">
-                <div class="first-letters">{{getFirstLettersName(item.name)}}</div>
+                <div class="first-letters" (click)="showDetail(item)">{{getFirstLettersName(item.name)}}</div>
                 <div>
                     <h2 class="post-title">{{item.title}}</h2>
                     <span class="pubblic-by">pubblicato da: <span class="username">{{item.username}}</span></span>

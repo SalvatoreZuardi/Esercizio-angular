@@ -1,5 +1,8 @@
+import { Observable } from 'rxjs';
+import { User } from './../interfaces/user.interface';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Post } from '../interfaces/post.interface';
 
 const baseUrl = 'https://jsonplaceholder.typicode.com';
 
@@ -10,11 +13,11 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  getPostsList() {
-    return this.http.get(baseUrl + '/posts');
+  getPostsList(): Observable<Post[]> {
+    return this.http.get<Post[]>(baseUrl + '/posts');
   }
 
-  getUsersList() {
-    return this.http.get(baseUrl + '/users');
+  getUsersList(): Observable<User[]> {
+    return this.http.get<User[]>(baseUrl + '/users');
   }
 }
